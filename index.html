@@ -15,7 +15,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.7;
-  font-size: 19px;
+  font-size: 20px;
   transition: background-color 0.8s ease, color 0.8s ease;
 }
 
@@ -31,11 +31,10 @@ h2 {
 /* SECTIONS */
 section {
   width: 100%;
-  transition: background-color 0.8s ease, color 0.8s ease;
   padding: 80px 6vw;
 }
 
-/* FOND DYNAMIQUE */
+/* FOND DYNAMIQUE FIXE (pour fallback) */
 .dark {
   background: #000;
   color: #fff;
@@ -60,7 +59,7 @@ section {
 .cover img {
   width: 100%;
   height: auto;
-  object-fit: contain; /* plus rogné */
+  object-fit: contain;
   margin-bottom: 20px;
 }
 .cover .credit {
@@ -70,6 +69,7 @@ section {
   font-weight: 600;
   font-size: 24px;
   color: #fff;
+  background: rgba(0,0,0,0.3); /* léger fond derrière le texte pour lisibilité */
 }
 
 /* VIDEO */
@@ -148,9 +148,7 @@ section {
   <img src="images/Kawas Sancti eng.pdf-image-000.jpg" alt="Kawas Sancti cover">
   <div class="credit">R I O &nbsp; V E R D E &nbsp; P R O D U C T I O N &nbsp; 2 0 2 5</div>
   <div class="text">
-    <p>Bienvenue dans le monde de Kawas Sancti, un documentaire anthropologique tourné à Taïwan sur les rituels chamaniques et chrétiens des communautés autochtones.</p>
-    <p>Ce projet allie recherche sur les pratiques religieuses et véritable expérience cinématographique.</p>
-    <p>Le film suit Marang Panay, jeune chaman, et le Père Joseph, missionnaire catholique, pour explorer la coexistence de ces deux univers spirituels.</p>
+    <p>R I O &nbsp; V E R D E &nbsp; P R O D U C T I O N &nbsp; 2 0 2 5</p>
   </div>
 </section>
 
@@ -168,9 +166,11 @@ section {
   <h2>S Y N O P S I S</h2>
   <img class="full-img" src="images/Kawas Sancti eng.pdf-image-001.jpg" alt="Synopsis image">
   <div class="text">
-    <p>Deep in the lush rice fields of Hualien County, Taiwan, the Pangcah (Amis) Indigenous community lives at the intersection of two spiritual worlds.</p>
-    <p>This 52-minute documentary follows the young shaman Marang Panay and Father Joseph, a Catholic missionary working in the same community.</p>
-    <p>The film explores the coexistence of shamanic traditions and Christian faith.</p>
+    <p>Deep in the lush rice fields of Hualien County, Taiwan, the Pangcah (Amis) Indigenous community lives at the intersection of two spiritual worlds:</p>
+    <p>On one hand, the ancestral traditions passed down through generations of shamans;</p>
+    <p>On the other hand, the Christian faith introduced by missionaries.</p>
+    <p>This 52-minute documentary follows the young shaman Marang Panay, documenting his performance of healing rituals. At the same time, we meet Father Joseph, a Catholic missionary working within the same community.</p>
+    <p>Through these two life paths, the film portrays the coexistence of these spiritual worlds and attempts to reveal the profound and essential similarities between them.</p>
   </div>
 </section>
 
@@ -178,8 +178,9 @@ section {
 <section class="light">
   <h2>D I R E C T O R ’ S &nbsp; S T A T E M E N T</h2>
   <div class="text">
-    <p>The film invites audiences to enter the layered spiritual world of the Pangcah community.</p>
-    <p>It offers an experience of listening rather than explanation, following the rhythm of the subjects’ own time.</p>
+    <p>The film invites audiences to delve into the complex and multi-layered spiritual world of the Indigenous community. By portraying the coexistence of shamanic rituals and Christian ceremonies, it reveals a culture that continuously adapts and evolves amid social and historical transformations.</p>
+    <p>As a shaman of the Sikawasay hierarchy, Marang’s life journey guides us into a world where shamanic rituals honor ancestral spirits, heal ailments, and sustain an intimate and profound connection with the sacred. The film also explores how Christianity, introduced by missionaries in the 1950s, gradually integrated into local traditions.</p>
+    <p>The creative intention of this work is to offer an experience of “listening” rather than a didactic exposition: following the rhythm of the subjects’ own time, attuning to their songs, their uncertainties, and the subtleties of their gestures.</p>
   </div>
   <img class="full-img" src="images/Kawas Sancti eng.pdf-image-002.jpg" alt="Director statement image">
 </section>
@@ -191,9 +192,9 @@ section {
   <div class="split">
     <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Director portrait">
     <div class="text">
-      <p>Researcher and filmmaker Gauthier Le Pévédic explores religious rituals worldwide.</p>
+      <p>Researcher and filmmaker Gauthier Le Pévédic is dedicated to creating documentaries that explore religious rituals around the world.</p>
       <p>In 2023, he completed Rio Verde in the Shipibo community of the Peruvian Amazon.</p>
-      <p>In 2024, he collaborated with the Pangcah community in Taiwan to complete Kawas Sancti.</p>
+      <p>In 2024, he collaborated with the Pangcah community in Tafalong, Taiwan, to complete Kawas Sancti.</p>
     </div>
   </div>
 
@@ -204,6 +205,28 @@ section {
     ✉️ <a href="mailto:rioverdeproduction@gmail.com">rioverdeproduction@gmail.com</a>
   </div>
 </section>
+
+<script>
+// Dynamisme : change body dark/light selon section visible
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+  let scrollPos = window.scrollY + window.innerHeight/2;
+  sections.forEach(sec => {
+    const top = sec.offsetTop;
+    const bottom = top + sec.offsetHeight;
+    if(scrollPos >= top && scrollPos <= bottom){
+      if(sec.classList.contains('dark')){
+        document.body.style.backgroundColor = '#000';
+        document.body.style.color = '#fff';
+      } else if(sec.classList.contains('light')){
+        document.body.style.backgroundColor = '#fff';
+        document.body.style.color = '#111';
+      }
+    }
+  });
+});
+</script>
 
 </body>
 </html>
