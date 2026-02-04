@@ -15,9 +15,9 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.8;
-  font-size: 22px; /* texte globalement plus lisible */
-  background-color: #000; /* fond noir fixe */
-  color: #fff; /* texte blanc fixe */
+  font-size: 22px; /* texte globalement lisible */
+  background-color: #000; /* fond noir */
+  color: #fff; /* texte blanc */
 }
 
 /* TITRES */
@@ -29,6 +29,10 @@ h2 {
   font-size: 30px;
   color: #fff;
 }
+
+/* DISPLAY POUR MOBILE/DESKTOP */
+.desktop-only { display: inline; }
+.mobile-only { display: none; }
 
 /* SECTIONS */
 section {
@@ -51,11 +55,10 @@ section {
 /* COVER */
 .cover img {
   width: 100%;
-  max-width: 95%; /* image centrée et ne déborde plus */
   height: auto;
-  object-fit: contain;
-  margin: 0 auto 20px;
+  object-fit: cover;
   display: block;
+  margin: 0 auto;
 }
 .cover .credit {
   text-align: center;
@@ -74,19 +77,18 @@ section {
   min-height: 60vh;
 }
 .video iframe {
-  width: 95vw;
-  height: 53vw;
+  width: 100vw;
+  height: 56.25vw; /* ratio 16:9 */
+  border: none;
   max-width: 1200px;
   max-height: 675px;
-  border: none;
 }
 
 /* IMAGES */
 .full-img {
-  width: 100%;
-  max-width: 95%; /* pour ne pas toucher les bords */
+  width: 100vw; /* touche les bords */
   height: auto;
-  margin: 40px auto;
+  margin: 40px 0;
   display: block;
 }
 
@@ -116,20 +118,22 @@ section {
 @media (max-width: 1000px) {
   h2 { font-size: 26px; }
   body { font-size: 20px; }
-  .split {
-    flex-direction: column;
-  }
+  .split { flex-direction: column; }
   .split img { width: 100%; margin-bottom: 20px; }
   .video iframe { width: 100%; height: 56vw; }
-  .full-img { max-width: 95%; }
   section { padding: 50px 5vw; }
+  .full-img { width: 100%; } /* touche les bords aussi sur tablette */
 }
 
 @media (max-width: 600px) {
   body { font-size: 18px; }
   h2 { font-size: 22px; }
-  .cover .credit { font-size: 22px; letter-spacing: 0.25em; }
   section { padding: 40px 4vw; }
+  .cover .credit { font-size: 22px; letter-spacing: 0.25em; }
+
+  /* MOBILE DISPLAY */
+  .desktop-only { display: none; }
+  .mobile-only { display: block; text-align: center; }
 }
 </style>
 </head>
@@ -139,7 +143,12 @@ section {
 <!-- PAGE 1 : COVER -->
 <section class="cover">
   <img src="images/Kawas Sancti eng.pdf-image-000.jpg" alt="Kawas Sancti cover">
-  <div class="credit">R I O &nbsp; V E R D E &nbsp; P R O D U C T I O N &nbsp; 2 0 2 5</div>
+  <div class="credit">
+    <span class="desktop-only">R I O &nbsp; V E R D E &nbsp; P R O D U C T I O N &nbsp; 2 0 2 5</span>
+    <span class="mobile-only">
+      R I O &nbsp; V E R D E &nbsp; P R O D U C T I O N<br>2 0 2 5
+    </span>
+  </div>
 </section>
 
 <!-- PAGE 2 : TRAILER -->
@@ -166,7 +175,10 @@ section {
 
 <!-- PAGE 4 : DIRECTOR STATEMENT -->
 <section>
-  <h2>D I R E C T O R ’ S &nbsp; S T A T E M E N T</h2>
+  <h2>
+    <span class="desktop-only">D I R E C T O R ’ S &nbsp; S T A T E M E N T</span>
+    <span class="mobile-only">D I R E C T O R ’ S<br>S T A T E M E N T</span>
+  </h2>
   <div class="text">
     <p>The film invites audiences to delve into the complex and multi-layered spiritual world of the Indigenous community. By portraying the coexistence of shamanic rituals and Christian ceremonies, it reveals a culture that continuously adapts and evolves amid social and historical transformations.</p>
     <p>As a shaman of the Sikawasay hierarchy, Marang’s life journey guides us into a world where shamanic rituals honor ancestral spirits, heal ailments, and sustain an intimate and profound connection with the sacred. The film also explores how Christianity, introduced by missionaries in the 1950s, gradually integrated into local traditions.</p>
@@ -177,7 +189,10 @@ section {
 
 <!-- PAGE 5 : DIRECTOR + CONTACT -->
 <section>
-  <h2>D I R E C T O R</h2>
+  <h2>
+    <span class="desktop-only">D I R E C T O R</span>
+    <span class="mobile-only">D I R E C T O R</span>
+  </h2>
 
   <div class="split">
     <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Director portrait">
