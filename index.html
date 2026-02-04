@@ -34,7 +34,7 @@ section {
   padding: 80px 6vw;
 }
 
-/* FOND DYNAMIQUE FIXE (pour fallback) */
+/* FOND DYNAMIQUE */
 .dark {
   background: #000;
   color: #fff;
@@ -69,7 +69,7 @@ section {
   font-weight: 600;
   font-size: 24px;
   color: #fff;
-  background: rgba(0,0,0,0.3); /* léger fond derrière le texte pour lisibilité */
+  background: rgba(0,0,0,0.3); /* léger fond pour lisibilité */
 }
 
 /* VIDEO */
@@ -147,9 +147,6 @@ section {
 <section class="cover dark">
   <img src="images/Kawas Sancti eng.pdf-image-000.jpg" alt="Kawas Sancti cover">
   <div class="credit">R I O &nbsp; V E R D E &nbsp; P R O D U C T I O N &nbsp; 2 0 2 5</div>
-  <div class="text">
-    <p>R I O &nbsp; V E R D E &nbsp; P R O D U C T I O N &nbsp; 2 0 2 5</p>
-  </div>
 </section>
 
 <!-- PAGE 2 : TRAILER -->
@@ -211,7 +208,7 @@ section {
 const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
-  let scrollPos = window.scrollY + window.innerHeight/2;
+  const scrollPos = window.scrollY + window.innerHeight / 2;
   sections.forEach(sec => {
     const top = sec.offsetTop;
     const bottom = top + sec.offsetHeight;
