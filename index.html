@@ -14,8 +14,8 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.7;
-  font-size: 20px;
+  line-height: 1.8;
+  font-size: 22px; /* texte globalement plus lisible */
   transition: background-color 0.8s ease, color 0.8s ease;
 }
 
@@ -24,40 +24,35 @@ h2 {
   text-align: center;
   font-style: italic;
   letter-spacing: 0.2em;
-  margin-bottom: 50px;
-  font-size: 28px;
+  margin-bottom: 40px;
+  font-size: 30px;
 }
 
 /* SECTIONS */
 section {
   width: 100%;
-  padding: 80px 6vw;
+  padding: 60px 6vw;
 }
 
-/* FOND DYNAMIQUE */
+/* FONDS */
 .dark {
-  background: #000;
+  background-color: #000;
   color: #fff;
 }
 .light {
-  background: #fff;
+  background-color: #fff;
   color: #111;
 }
 
 /* Texte et liens */
-.light p, .light a {
-  color: #111;
-}
-.light h2 {
-  color: #000;
-}
-.dark a {
-  color: #fff;
-}
+.light p, .light a { color: #111; }
+.light h2 { color: #000; }
+.dark a { color: #fff; }
 
 /* COVER */
 .cover img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   margin-bottom: 20px;
@@ -66,10 +61,10 @@ section {
   text-align: center;
   padding: 25px 0;
   letter-spacing: 0.35em;
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: bold;
+  font-size: 26px;
   color: #fff;
-  background: rgba(0,0,0,0.3); /* léger fond pour lisibilité */
+  background: rgba(0,0,0,0.3); 
 }
 
 /* VIDEO */
@@ -77,11 +72,11 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 60vh;
 }
 .video iframe {
-  width: 90vw;
-  height: 50vw;
+  width: 95vw;
+  height: 53vw;
   max-width: 1200px;
   max-height: 675px;
   border: none;
@@ -90,7 +85,8 @@ section {
 /* IMAGES */
 .full-img {
   width: 100%;
-  margin: 50px 0;
+  height: auto;
+  margin: 40px 0;
 }
 
 /* TEXTES */
@@ -117,7 +113,7 @@ section {
 .contact {
   text-align: center;
   margin-top: 50px;
-  font-size: 20px;
+  font-size: 22px;
 }
 .contact a {
   color: inherit;
@@ -126,17 +122,21 @@ section {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  h2 { font-size: 26px; }
+  body { font-size: 20px; }
+  .split {
+    flex-direction: column;
+  }
+  .split img { width: 100%; margin-bottom: 20px; }
   .video iframe {
     width: 100%;
     height: 56vw;
   }
-  .split {
-    flex-direction: column;
-  }
-  .split img {
-    width: 100%;
-  }
+}
+@media (max-width: 600px) {
+  body { font-size: 18px; }
+  h2 { font-size: 22px; }
 }
 </style>
 </head>
@@ -204,15 +204,14 @@ section {
 </section>
 
 <script>
-// Dynamisme : change body dark/light selon section visible
+// Dynamisme : fond noir/blanc au scroll
 const sections = document.querySelectorAll('section');
-
 window.addEventListener('scroll', () => {
-  const scrollPos = window.scrollY + window.innerHeight / 2;
+  const scrollMiddle = window.scrollY + window.innerHeight / 2;
   sections.forEach(sec => {
     const top = sec.offsetTop;
     const bottom = top + sec.offsetHeight;
-    if(scrollPos >= top && scrollPos <= bottom){
+    if(scrollMiddle >= top && scrollMiddle <= bottom){
       if(sec.classList.contains('dark')){
         document.body.style.backgroundColor = '#000';
         document.body.style.color = '#fff';
