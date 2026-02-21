@@ -66,17 +66,22 @@ section {
 /* SYNOPSIS : un peu plus d’espace après l’image */
 .synopsis-text {
   max-width: 900px;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 0 auto; /* 30px au dessus du texte pour respirer */
   text-align: justify;
 }
 
-/* IMAGES / VIDEO */
+/* IMAGES / VIDEO TOUCHANT LES DEUX BORDS */
 .cover-img, .full-img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
   margin: 0 auto;
+}
+
+/* ESPACE ENTRE LES DEUX DERNIÈRES IMAGES */
+.last-page img {
+  margin-bottom: 30px; /* 30px entre avant-dernière et dernière image */
 }
 
 .video iframe {
@@ -89,10 +94,36 @@ section {
   margin: 0 auto;
 }
 
+/* DIRECTOR SPLIT */
+.split {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.split img {
+  width: 45%;
+}
+
+/* CONTACT */
+.contact {
+  margin-top: 50px;
+  font-size: 22px;
+  font-family: 'Lato', sans-serif; /* police plus élégante */
+}
+.contact a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif; /* mail cliquable élégant */
+}
+
 /* RESPONSIVE */
 @media (max-width: 1000px) {
   h2 { font-size: 26px; }
   body { font-size: 20px; }
+  .split { flex-direction: column; }
+  .split img { width: 100%; margin-bottom: 20px; }
   section { padding: 50px 5vw; }
   .full-img { width: 100%; }
 }
@@ -118,11 +149,15 @@ section {
 <!-- PAGE 2 : SYNOPSIS -->
 <section>
   <h2>S Y N O P S I S</h2>
-  <img class="full-img" src="images/Kawas Sancti eng.pdf-image-001.jpg" alt="Synopsis image">
+  
   <div class="text synopsis-text">
     <p>Deep in the lush rice fields of Hualien County, Taiwan, the Pangcah (Amis) Indigenous community lives at the intersection of two spiritual worlds:</p>
     <p>On one hand, the ancestral traditions passed down through generations of shamans;</p>
     <p>On the other hand, the Christian faith introduced by missionaries.</p>
+    
+    <!-- IMAGE 3 insérée ici -->
+    <img class="full-img" src="images/Kawas Sancti eng.pdf-image-003.jpg" alt="Synopsis illustration">
+
     <p>This 52-minute documentary follows the young shaman Marang Panay, documenting his performance of healing rituals. At the same time, we meet Father Joseph, a Catholic missionary working within the same community.</p>
     <p>Through these two life paths, the film portrays the coexistence of these spiritual worlds and attempts to reveal the profound and essential similarities between them.</p>
   </div>
