@@ -42,16 +42,17 @@ body {
 /* PROJETS */
 .projects {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  flex-direction: column; /* Kawas en haut, Rio Verde dessous */
+  align-items: center;
+  gap: 30px;
   margin-bottom: 80px;
 }
 
 .project-box {
-  background-color: #111;
-  padding: 20px 30px;
-  width: 250px;
+  background-color: #000;
+  padding: 20px 40px;
+  width: 280px;
+  border: 2px solid #fff; /* contour blanc */
   border-radius: 8px;
   text-decoration: none;
   color: #fff;
@@ -60,7 +61,8 @@ body {
 }
 
 .project-box:hover {
-  background-color: #333;
+  background-color: #111;
+  border-color: #ccc;
 }
 
 /* LIENS TEAM & CONTACT EN BAS */
@@ -73,24 +75,22 @@ body {
 }
 
 .link-box {
-  background-color: #111;
+  background-color: #000;
   padding: 20px 40px;
+  border: 2px solid #fff;
+  border-radius: 8px;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 8px;
   transition: 0.3s;
 }
 
 .link-box:hover {
-  background-color: #333;
+  background-color: #111;
+  border-color: #ccc;
 }
 
 /* RESPONSIVE */
-@media (max-width: 800px) {
-  .projects { flex-direction: column; align-items: center; }
-}
-
 @media (max-width: 600px) {
   .logo { width: 70%; }
 }
