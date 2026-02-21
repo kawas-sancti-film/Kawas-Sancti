@@ -17,11 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -41,52 +37,22 @@ h2 {
   color: #fff;
 }
 
-/* DISPLAY POUR MOBILE/DESKTOP */
-.desktop-only { display: inline; }
-.mobile-only { display: none; text-align: center; }
-
 /* SECTIONS */
-section {
-  width: 100%;
-  padding: 60px 6vw;
-}
+section { width: 100%; padding: 60px 6vw; }
 
 /* TEXTE */
-.text {
-  max-width: 900px;
-  margin: auto;
-  overflow-wrap: break-word;
-  text-align: justify;
-}
-.text p {
-  margin-bottom: 22px;
-  color: #fff;
-}
+.text { max-width: 900px; margin: auto; overflow-wrap: break-word; text-align: justify; }
+.text p { margin-bottom: 22px; color: #fff; }
 
-/* SYNOPSIS : un peu plus d’espace après l’image */
-.synopsis-text {
-  max-width: 900px;
-  margin: 30px auto 0 auto; /* 30px au dessus du texte pour respirer */
-  text-align: justify;
-}
+/* SYNOPSIS */
+.synopsis-text { max-width: 900px; margin: 30px auto 0 auto; text-align: justify; }
 
-/* IMAGES / VIDEO TOUCHANT LES DEUX BORDS */
-.cover-img, .full-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  margin: 0 auto;
-}
-
-/* ESPACE ENTRE LES DEUX DERNIÈRES IMAGES */
-.last-page img {
-  margin-bottom: 30px; /* 30px entre avant-dernière et dernière image */
-}
+/* IMAGES / VIDEO */
+.cover-img, .full-img { width: 100%; height: auto; display: block; object-fit: cover; margin: 0 auto; }
 
 .video iframe {
   width: 100%;
-  height: 56.25vw; /* ratio 16:9 */
+  height: 56.25vw;
   max-width: 1200px;
   max-height: 675px;
   border: none;
@@ -94,48 +60,9 @@ section {
   margin: 0 auto;
 }
 
-/* DIRECTOR SPLIT */
-.split {
-  display: flex;
-  gap: 60px;
-  align-items: center;
-  justify-content: center;
-}
-.split img {
-  width: 45%;
-}
-
-/* CONTACT */
-.contact {
-  margin-top: 50px;
-  font-size: 22px;
-  font-family: 'Lato', sans-serif; /* police plus élégante */
-}
-.contact a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-family: 'Lato', sans-serif; /* mail cliquable élégant */
-}
-
 /* RESPONSIVE */
-@media (max-width: 1000px) {
-  h2 { font-size: 26px; }
-  body { font-size: 20px; }
-  .split { flex-direction: column; }
-  .split img { width: 100%; margin-bottom: 20px; }
-  section { padding: 50px 5vw; }
-  .full-img { width: 100%; }
-}
-
-@media (max-width: 600px) {
-  body { font-size: 18px; }
-  h2 { font-size: 22px; }
-  section { padding: 40px 4vw; }
-
-  .desktop-only { display: none; }
-  .mobile-only { display: block; text-align: center; }
-}
+@media (max-width: 1000px) { h2 { font-size: 26px; } body { font-size: 20px; } section { padding: 50px 5vw; } .full-img { width: 100%; } }
+@media (max-width: 600px) { h2 { font-size: 22px; } body { font-size: 18px; } section { padding: 40px 4vw; } }
 </style>
 </head>
 
@@ -181,30 +108,6 @@ section {
     <p>The creative intention of this work is to offer an experience of “listening” rather than a didactic exposition: following the rhythm of the subjects’ own time, attuning to their songs, their uncertainties, and the subtleties of their gestures.</p>
   </div>
   <img class="full-img" src="images/Kawas Sancti eng.pdf-image-002.jpg" alt="Director statement image">
-</section>
-
-<!-- PAGE 5 : DIRECTOR + CONTACT -->
-<section class="last-page">
-  <h2>
-    <span class="desktop-only">D I R E C T O R</span>
-    <span class="mobile-only">D I R E C T O R</span>
-  </h2>
-
-  <div class="split">
-    <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Director portrait">
-    <div class="text">
-      <p>Researcher and filmmaker Gauthier Le Pévédic is dedicated to creating documentaries that explore religious rituals around the world.</p>
-      <p>In 2023, he completed Rio Verde in the Shipibo community of the Peruvian Amazon.</p>
-      <p>In 2024, he collaborated with the Pangcah community in Tafalong, Taiwan, to complete Kawas Sancti.</p>
-    </div>
-  </div>
-
-  <img class="full-img" src="images/Kawas Sancti eng.pdf-image-003.jpg" alt="Final image">
-
-  <div class="contact">
-    📞 +33 6 84 08 40 13<br><br>
-    ✉️ <a href="mailto:rioverdeproduction@gmail.com">rioverdeproduction@gmail.com</a>
-  </div>
 </section>
 
 </body>
