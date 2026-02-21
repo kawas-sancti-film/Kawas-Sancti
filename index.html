@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rio Verde Production | Home</title>
+<title>Rio Verde Production</title>
 
 <!-- FAVICONS -->
 <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -17,92 +17,82 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'Lato', sans-serif;
   background-color: #000;
   color: #fff;
   text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px;
+  line-height: 1.8;
 }
 
 /* LOGO */
 .logo {
-  max-width: 400px;
-  width: 50%;
-  height: auto;
-  margin: 40px auto;
+  max-width: 300px;
+  width: 80%;
+  margin: 50px auto 60px auto;
+  display: block;
 }
 
-/* BOUTONS PROJETS */
+/* PROJETS */
 .projects {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-bottom: 60px;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
 }
 
-.project-btn {
-  display: inline-block;
-  padding: 20px 50px;
-  font-size: 22px;
-  font-weight: 600;
-  color: #fff;
+.project-box {
+  background-color: #111;
+  padding: 20px 30px;
+  width: 250px;
+  border-radius: 8px;
   text-decoration: none;
-  border: 2px solid #fff;
-  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.project-btn:hover {
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
+.project-box:hover {
+  background-color: #333;
 }
 
-/* BOUTONS EN BAS : TEAM + CONTACT */
-.bottom-section {
+/* LIENS TEAM & CONTACT EN BAS */
+.bottom-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: auto;
-  width: 100%;
-  padding-bottom: 40px;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap; /* passe en colonne sur mobile */
 }
 
-.bottom-btn {
-  display: inline-block;
-  flex: 1 1 45%;
-  max-width: 250px;
-  padding: 15px 0;
-  font-size: 20px;
-  font-weight: 600;
+.link-box {
+  background-color: #111;
+  padding: 20px 40px;
   color: #fff;
   text-decoration: none;
-  border: 2px solid #fff;
-  text-align: center;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-.bottom-btn:hover {
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
+.link-box:hover {
+  background-color: #333;
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-  .logo { width: 70%; margin-bottom: 30px; }
-  .project-btn { font-size: 18px; padding: 15px 30px; }
+@media (max-width: 800px) {
+  .projects { flex-direction: column; align-items: center; }
 }
 
-@media (max-width: 400px) {
-  .bottom-btn { flex: 1 1 48%; font-size: 18px; padding: 12px 0; }
+@media (max-width: 600px) {
+  .logo { width: 70%; }
 }
 </style>
 </head>
@@ -112,17 +102,17 @@ body {
 <!-- LOGO -->
 <img src="images/Logo.png" alt="Rio Verde Production Logo" class="logo">
 
-<!-- BOUTONS VERS LES PROJETS -->
+<!-- PROJETS -->
 <div class="projects">
-  <a href="Kawas.html" class="project-btn">Kawas Sancti</a>
-  <a href="RioVerde.html" class="project-btn">Rio Verde</a>
+  <a href="Kawas.html" class="project-box">Kawas Sancti</a>
+  <a href="RioVerde.html" class="project-box">Rio Verde</a>
 </div>
 
-<!-- BOTTOM BUTTONS : TEAM + CONTACT -->
-<div class="bottom-section">
-  <a href="team.html" class="bottom-btn">Team</a>
-  <a href="contact.html" class="bottom-btn">Contact</a>
-</div>
+<!-- TEAM & CONTACT -->
+<section class="bottom-links">
+  <a href="team.html" class="link-box">Team</a>
+  <a href="contact.html" class="link-box">Contact</a>
+</section>
 
 </body>
 </html>
