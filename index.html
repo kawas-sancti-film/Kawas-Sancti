@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rio Verde Production</title>
+<title>Rio Verde Production | Accueil</title>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
@@ -20,69 +20,61 @@ body {
   background-color: #000;
   color: #fff;
   text-align: center;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
+  align-items: center;
 }
 
-/* Logo */
+/* LOGO */
 .logo {
-  max-width: 300px;
-  width: 80%;
-  margin: 0 auto 60px auto;
+  max-width: 400px;
+  width: 50%;
+  height: auto;
+  margin-bottom: 60px;
 }
 
-/* Boutons / liens projets */
+/* BOUTONS PROJETS */
 .projects {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  align-items: center;
-  justify-content: center;
 }
 
-.projects a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  font-size: 24px;
+.project-btn {
+  display: inline-block;
+  padding: 20px 50px;
+  font-size: 22px;
   font-weight: 600;
+  color: #fff;
+  text-decoration: none;
   border: 2px solid #fff;
-  padding: 15px 40px;
-  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
-.projects a:hover {
+.project-btn:hover {
   background-color: #fff;
   color: #000;
+  cursor: pointer;
 }
 
-/* Responsive */
-@media(min-width: 600px){
-  .projects {
-    flex-direction: row;
-    gap: 50px;
-  }
-  .projects a {
-    font-size: 28px;
-    padding: 18px 50px;
-  }
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .logo { width: 70%; margin-bottom: 40px; }
+  .project-btn { font-size: 18px; padding: 15px 30px; }
 }
 </style>
 </head>
-
 <body>
 
-<!-- Logo -->
-<img src="images/logo.png" alt="Rio Verde Production Logo" class="logo">
+<!-- LOGO -->
+<img src="images/Logo.png" alt="Rio Verde Production Logo" class="logo">
 
-<!-- Liens projets -->
+<!-- BOUTONS VERS LES PROJETS -->
 <div class="projects">
-  <a href="Kawas.html">Kawas Sancti</a>
-  <a href="RioVerde.html">Rio Verde</a>
+  <a href="Kawas.html" class="project-btn">Kawas Sancti</a>
+  <a href="RioVerde.html" class="project-btn">Rio Verde</a>
 </div>
 
 </body>
