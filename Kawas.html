@@ -17,7 +17,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -37,22 +41,47 @@ h2 {
   color: #fff;
 }
 
+/* DISPLAY POUR MOBILE/DESKTOP */
+.desktop-only { display: inline; }
+.mobile-only { display: none; text-align: center; }
+
 /* SECTIONS */
-section { width: 100%; padding: 60px 6vw; }
+section {
+  width: 100%;
+  padding: 60px 6vw;
+}
 
 /* TEXTE */
-.text { max-width: 900px; margin: auto; overflow-wrap: break-word; text-align: justify; }
-.text p { margin-bottom: 22px; color: #fff; }
+.text {
+  max-width: 900px;
+  margin: auto;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+.text p {
+  margin-bottom: 22px;
+  color: #fff;
+}
 
-/* SYNOPSIS */
-.synopsis-text { max-width: 900px; margin: 30px auto 0 auto; text-align: justify; }
+/* SYNOPSIS : un peu plus d’espace après l’image */
+.synopsis-text {
+  max-width: 900px;
+  margin: 30px auto 0 auto;
+  text-align: justify;
+}
 
 /* IMAGES / VIDEO */
-.cover-img, .full-img { width: 100%; height: auto; display: block; object-fit: cover; margin: 0 auto; }
+.cover-img, .full-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+}
 
 .video iframe {
   width: 100%;
-  height: 56.25vw;
+  height: 56.25vw; /* ratio 16:9 */
   max-width: 1200px;
   max-height: 675px;
   border: none;
@@ -61,8 +90,21 @@ section { width: 100%; padding: 60px 6vw; }
 }
 
 /* RESPONSIVE */
-@media (max-width: 1000px) { h2 { font-size: 26px; } body { font-size: 20px; } section { padding: 50px 5vw; } .full-img { width: 100%; } }
-@media (max-width: 600px) { h2 { font-size: 22px; } body { font-size: 18px; } section { padding: 40px 4vw; } }
+@media (max-width: 1000px) {
+  h2 { font-size: 26px; }
+  body { font-size: 20px; }
+  section { padding: 50px 5vw; }
+  .full-img { width: 100%; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 18px; }
+  h2 { font-size: 22px; }
+  section { padding: 40px 4vw; }
+
+  .desktop-only { display: none; }
+  .mobile-only { display: block; text-align: center; }
+}
 </style>
 </head>
 
