@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rio Verde Production | Accueil</title>
+<title>Rio Verde Production | Home</title>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
@@ -23,8 +23,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 20px;
 }
 
 /* LOGO */
@@ -32,7 +33,7 @@ body {
   max-width: 400px;
   width: 50%;
   height: auto;
-  margin-bottom: 60px;
+  margin: 40px auto;
 }
 
 /* BOUTONS PROJETS */
@@ -40,6 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 60px;
 }
 
 .project-btn {
@@ -59,10 +61,84 @@ body {
   cursor: pointer;
 }
 
+/* TEAM + CONTACT CONTAINER */
+.bottom-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: auto; /* pousse vers le bas */
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* TEAM SECTION */
+.team {
+  flex: 1;
+  min-width: 250px;
+}
+
+.team h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.member img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.member-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* CONTACT SECTION */
+.contact {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact a:hover {
+  color: #ddd;
+}
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
-  .logo { width: 70%; margin-bottom: 40px; }
+  .logo { width: 70%; margin-bottom: 30px; }
   .project-btn { font-size: 18px; padding: 15px 30px; }
+  .bottom-section { flex-direction: column; gap: 40px; }
+  .member { width: 45%; }
 }
 </style>
 </head>
@@ -75,6 +151,36 @@ body {
 <div class="projects">
   <a href="Kawas.html" class="project-btn">Kawas Sancti</a>
   <a href="RioVerde.html" class="project-btn">Rio Verde</a>
+</div>
+
+<!-- BOTTOM SECTION : TEAM + CONTACT -->
+<div class="bottom-section">
+
+  <!-- TEAM -->
+  <section class="team">
+    <h2>Team</h2>
+    <div class="team-members">
+      <div class="member">
+        <img src="images/member1.jpg" alt="Member 1">
+        <div class="member-name">Gauthier Le Pévédic</div>
+      </div>
+      <div class="member">
+        <img src="images/member2.jpg" alt="Member 2">
+        <div class="member-name">Alice Dupont</div>
+      </div>
+      <div class="member">
+        <img src="images/member3.jpg" alt="Member 3">
+        <div class="member-name">Marc Tremblay</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <a href="mailto:rioverdeproduction@gmail.com">Email Us</a>
+    <a href="tel:+33684084013">Call Us</a>
+  </section>
+
 </div>
 
 </body>
