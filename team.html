@@ -17,15 +17,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: #000;
   color: #fff;
   text-align: center;
-  margin: 0;
-  padding: 20px;
+  line-height: 1.8;
+  font-size: 22px; /* texte principal plus gros */
 }
 
+/* TITRES */
 h2 {
   font-style: italic;
   letter-spacing: 0.2em;
@@ -34,45 +41,70 @@ h2 {
   color: #fff;
 }
 
-.split {
-  display: flex;
-  gap: 60px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
+/* TEAM SECTION */
+.team-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
 }
 
-.split img {
-  width: 250px;
-  height: auto;
+.team-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* IMAGE + TEXTE */
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.team-member img {
+  width: 45%;
+  max-width: 400px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
-.text {
-  max-width: 500px;
-  text-align: justify;
+.team-member .text {
+  text-align: left;
+  font-size: 24px; /* texte plus grand */
 }
 
-@media (max-width: 800px) {
-  .split { flex-direction: column; }
-  .split img { width: 70%; margin-bottom: 20px; }
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .team-member {
+    flex-direction: column;
+  }
+  .team-member img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .team-member .text {
+    font-size: 20px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<h2>Team</h2>
-
-<div class="split">
-  <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Director Gauthier Le Pévédic">
-  <div class="text">
-    <p>Researcher and filmmaker Gauthier Le Pévédic is dedicated to creating documentaries that explore religious rituals around the world.</p>
-    <p>In 2023, he completed Rio Verde in the Shipibo community of the Peruvian Amazon.</p>
-    <p>In 2024, he collaborated with the Pangcah community in Tafalong, Taiwan, to complete Kawas Sancti.</p>
+<!-- PAGE TEAM -->
+<section class="team-section">
+  <h2 class="team-title">Director</h2>
+  
+  <div class="team-member">
+    <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Director portrait">
+    <div class="text">
+      <p>Researcher and filmmaker Gauthier Le Pévédic is dedicated to creating documentaries that explore religious rituals around the world.</p>
+      <p>In 2023, he completed Rio Verde in the Shipibo community of the Peruvian Amazon.</p>
+      <p>In 2024, he collaborated with the Pangcah community in Tafalong, Taiwan, to complete Kawas Sancti.</p>
+    </div>
   </div>
-</div>
+</section>
 
 </body>
 </html>
