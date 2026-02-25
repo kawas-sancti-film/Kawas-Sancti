@@ -31,6 +31,9 @@ h2 {
   font-size: 30px;
 }
 
+.desktop-only { display: inline; }
+.mobile-only { display: none; }
+
 /* SECTIONS */
 section {
   width: 100%;
@@ -48,7 +51,7 @@ section {
   margin-bottom: 22px;
 }
 
-/* IMAGES / VIDEO */
+/* IMAGES */
 .cover-img, .full-img {
   width: 100%;
   height: auto;
@@ -57,9 +60,10 @@ section {
   margin: 0 auto;
 }
 
+/* VIDEO */
 .video iframe {
   width: 100%;
-  height: 56.25vw; /* ratio 16:9 */
+  height: 56.25vw; /* 16:9 */
   max-width: 1200px;
   max-height: 675px;
   border: none;
@@ -78,6 +82,9 @@ section {
   body { font-size: 18px; }
   h2 { font-size: 22px; }
   section { padding: 40px 4vw; }
+
+  .desktop-only { display: none; }
+  .mobile-only { display: block; }
 }
 </style>
 </head>
@@ -97,7 +104,9 @@ section {
 
   <div class="text">
     <p>Rio Verde is named after a river flowing through the remote village of Roaboya in the Peruvian Amazon.</p>
+
     <p>The film explores the relationship between shamans and evangelical pastors in this isolated land—where songs, visions, and ayahuasca ceremonies coexist with the words of the Bible.</p>
+
     <p>Between trance and prayer, the film reveals a profound dialogue between two approaches to faith and healing.</p>
   </div>
 </section>
@@ -114,7 +123,10 @@ section {
 
 <!-- PAGE 4 : DIRECTOR’S STATEMENT -->
 <section>
-  <h2>D I R E C T O R ’ S &nbsp; S T A T E M E N T</h2>
+  <h2>
+    <span class="desktop-only">D I R E C T O R ’ S &nbsp; S T A T E M E N T</span>
+    <span class="mobile-only">D I R E C T O R ’ S<br>S T A T E M E N T</span>
+  </h2>
 
   <div class="text">
     <p>Deep in the Peruvian Amazon, the village of Roaboya is a place where multiple faiths coexist: traditional shamanic practices, evangelical churches, and the Seventh-day Adventist religious tradition.</p>
