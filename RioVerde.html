@@ -3,81 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rio Verde | Coming Soon</title>
+<title>Rio Verde | Film</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.8;
+  font-size: 22px;
   background-color: #000;
   color: #fff;
-  font-family: 'Lato', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   text-align: center;
-  padding: 40px 20px;
 }
 
-.container {
-  max-width: 800px;
-  width: 100%;
-}
-
-h1 {
-  font-size: 36px;
-  letter-spacing: 0.3em;
-  margin-bottom: 50px;
+/* TITRES */
+h2 {
   font-style: italic;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  font-size: 30px;
 }
 
-p {
-  font-size: 22px;
-  opacity: 0.85;
-  letter-spacing: 0.1em;
-  margin-bottom: 15px;
+/* SECTIONS */
+section {
+  width: 100%;
+  padding: 60px 6vw;
 }
 
-/* TABLET */
-@media (max-width: 900px) {
-  h1 { font-size: 30px; }
-  p { font-size: 20px; }
+/* TEXTE */
+.text {
+  max-width: 900px;
+  margin: 30px auto 0 auto;
+  text-align: justify;
 }
 
-/* MOBILE */
+.text p {
+  margin-bottom: 22px;
+}
+
+/* IMAGES / VIDEO */
+.cover-img, .full-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.video iframe {
+  width: 100%;
+  height: 56.25vw; /* ratio 16:9 */
+  max-width: 1200px;
+  max-height: 675px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  body { font-size: 20px; }
+  h2 { font-size: 26px; }
+  section { padding: 50px 5vw; }
+}
+
 @media (max-width: 600px) {
-  body {
-    padding: 30px 15px;
-  }
-
-  h1 {
-    font-size: 22px;
-    letter-spacing: 0.2em;
-    margin-bottom: 30px;
-  }
-
-  p {
-    font-size: 16px;
-    letter-spacing: 0.05em;
-  }
+  body { font-size: 18px; }
+  h2 { font-size: 22px; }
+  section { padding: 40px 4vw; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <h1>R I O &nbsp; V E R D E</h1>
-  <p>Page currently in progress.</p>
-  <p>Coming soon.</p>
-</div>
+<!-- PAGE 1 : COVER -->
+<section>
+  <img src="images/Rio Verde image 0.jpg" alt="Rio Verde cover" class="cover-img">
+</section>
+
+<!-- PAGE 2 : SYNOPSIS -->
+<section>
+  <h2>S Y N O P S I S</h2>
+
+  <img src="images/Rio Verde image 1.jpg" alt="Rio Verde synopsis image" class="full-img">
+
+  <div class="text">
+    <p>Rio Verde is named after a river flowing through the remote village of Roaboya in the Peruvian Amazon.</p>
+    <p>The film explores the relationship between shamans and evangelical pastors in this isolated land—where songs, visions, and ayahuasca ceremonies coexist with the words of the Bible.</p>
+    <p>Between trance and prayer, the film reveals a profound dialogue between two approaches to faith and healing.</p>
+  </div>
+</section>
+
+<!-- PAGE 3 : TRAILER -->
+<section class="video">
+  <h2>T R A I L E R</h2>
+  <iframe 
+    src="https://www.youtube.com/embed/xdDDuLxOJ1M"
+    title="Rio Verde Trailer"
+    allowfullscreen>
+  </iframe>
+</section>
+
+<!-- PAGE 4 : DIRECTOR’S STATEMENT -->
+<section>
+  <h2>D I R E C T O R ’ S &nbsp; S T A T E M E N T</h2>
+
+  <div class="text">
+    <p>Deep in the Peruvian Amazon, the village of Roaboya is a place where multiple faiths coexist: traditional shamanic practices, evangelical churches, and the Seventh-day Adventist religious tradition.</p>
+
+    <p>Through a close observation of their singing, rituals, and mystical manifestations, the film explores the resonances and divergences between these spiritual worlds.</p>
+  </div>
+
+  <img src="images/Rio Verde image 2.jpg" alt="Rio Verde director statement image" class="full-img">
+
+  <div class="text">
+    <p>Shamanic rituals center on the consumption of ayahuasca, inviting participants to engage in dialogue with the spirits of nature. The icaros—sacred songs inspired by plants—serve as a medium for healing and inner revelation.</p>
+
+    <p>In contrast, the hymns of evangelical and Seventh-day Adventist communities speak to the Holy Spirit and Jesus, seeking purification, conversion, and the presence of the divine.</p>
+
+    <p>Although expressed differently, these practices all employ sound, breath, and trance to point toward a form of spiritual elevation.</p>
+
+    <p>Research suggests that these seemingly distinct religious practices share a fundamental pursuit: establishing a relationship with the unseen, transcending ordinary consciousness, and entering a state of openness and communion.</p>
+
+    <p>However, Christianity rejects any equivalence between these rituals—for evangelical believers, only the one true God constitutes a legitimate and authentic object of faith.</p>
+  </div>
+</section>
 
 </body>
 </html>
