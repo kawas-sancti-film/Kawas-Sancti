@@ -33,58 +33,66 @@ body {
 }
 
 /* TITRES */
-h2 {
+.team-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 80px 0 30px 0;
   font-style: italic;
-  letter-spacing: 0.2em;
-  margin-bottom: 40px;
-  font-size: 30px;
-  color: #fff;
+  letter-spacing: 0.15em;
 }
 
-/* TEAM SECTION */
+/* SECTION */
 .team-section {
   width: 90%;
   max-width: 1000px;
   margin: 50px auto;
 }
 
-.team-title {
-  font-size: 28px;
-  font-weight: 600;
-  margin: 80px 0 30px 0;
-}
-
-/* IMAGE + TEXTE */
+/* BLOC MEMBRE */
 .team-member {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 
-.team-member img {
+.image-container {
   width: 45%;
   max-width: 400px;
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
 
+.member-name {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
 .team-member .text {
   text-align: left;
-  font-size: 24px;
+  font-size: 23px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 1000px) {
   .team-member {
     flex-direction: column;
+    align-items: center;
   }
-  .team-member img {
+
+  .image-container {
     width: 80%;
-    margin-bottom: 20px;
   }
+
   .team-member .text {
-    font-size: 20px;
+    font-size: 19px;
     text-align: center;
   }
 }
@@ -96,30 +104,38 @@ h2 {
 <section class="team-section">
 
   <!-- DIRECTOR -->
-  <h2 class="team-title">Director</h2>
+  <div class="team-title">Director</div>
   
   <div class="team-member">
-    <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Director portrait">
+    <div class="image-container">
+      <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Gauthier Le Pévédic">
+      <div class="member-name">Gauthier Le Pévédic</div>
+    </div>
+
     <div class="text">
-      <p>Researcher and filmmaker Gauthier Le Pévédic is dedicated to creating documentaries that explore religious rituals around the world.</p>
-      <p>In 2023, he completed Rio Verde in the Shipibo community of the Peruvian Amazon.</p>
-      <p>In 2024, he collaborated with the Pangcah community in Tafalong, Taiwan, to complete Kawas Sancti.</p>
+      <p>Gauthier Le Pévédic is a researcher and filmmaker dedicated to documentary cinema exploring religious rituals and spiritual practices around the world.</p>
+
+      <p>In 2023, he completed <em>Rio Verde</em> within the Shipibo community of the Peruvian Amazon.</p>
+
+      <p>In 2024, he collaborated with the Pangcah community in Tafalong, Taiwan, to complete <em>Kawas Sancti</em>.</p>
     </div>
   </div>
 
-  <!-- POST-PRODUCTION DIRECTOR -->
-  <h2 class="team-title">Directeur de post-production</h2>
+  <!-- HEAD OF POST-PRODUCTION -->
+  <div class="team-title">Head of Post-Production</div>
 
   <div class="team-member">
-    <img src="images/Florian,contact.JPG" alt="Florian Thibert">
+    <div class="image-container">
+      <img src="images/Florian,contact.JPG" alt="Florian Thibert">
+      <div class="member-name">Florian Thibert</div>
+    </div>
+
     <div class="text">
-      <p>Initially an industrial electromechanical repairer and self-taught sound system operator, Florian Thibert converted to image in 2020.</p>
+      <p>Florian Thibert began his professional path as an industrial electromechanical repairer and self-taught sound system operator before turning to image-making in 2020.</p>
 
-      <p>He owns a technical service company, "Tekhnè - Music & Film", with which he produces and directs documentaries.</p>
+      <p>He founded the technical service company <em>Tekhnè – Music & Film</em>, through which he produces and directs documentary projects.</p>
 
-      <p>He is also a camera operator for France 3 Régions and a member of the image department of the CST, Commission Supérieure Technique de l'Image et du Son.</p>
-
-      <p>His interests include botany, philosophy and technical arts.</p>
+      <p>He is a camera operator for France 3 Régions and a member of the image department of the CST (Commission Supérieure Technique de l’Image et du Son).</p>
     </div>
   </div>
 
