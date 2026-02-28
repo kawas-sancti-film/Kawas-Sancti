@@ -5,15 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Team | Rio Verde Production</title>
 
-<!-- FAVICONS -->
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -51,7 +42,7 @@ body {
 /* BLOC MEMBRE */
 .team-member {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* ALIGNEMENT HAUT */
   gap: 60px;
   margin-bottom: 140px;
 }
@@ -67,6 +58,7 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 8px;
+  display: block;
 }
 
 .member-name {
@@ -80,6 +72,7 @@ body {
   width: 50%;
   text-align: left;
   font-size: 23px;
+  margin-top: 0; /* pas de décalage */
 }
 
 /* RESPONSIVE */
@@ -97,6 +90,7 @@ body {
     width: 100%;
     font-size: 19px;
     text-align: center;
+    margin-top: 25px;
   }
 }
 </style>
