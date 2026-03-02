@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kawas Sancti | Film</title>
+
+<!-- FAVICONS -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.8;
+  font-size: 22px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+/* TITRES */
+h2 {
+  font-style: italic;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #fff;
+}
+
+/* DISPLAY POUR MOBILE/DESKTOP */
+.desktop-only { display: inline; }
+.mobile-only { display: none; text-align: center; }
+
+/* SECTIONS */
+section {
+  width: 100%;
+  padding: 60px 6vw;
+}
+
+/* TEXTE */
+.text {
+  max-width: 900px;
+  margin: auto;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+.text p {
+  margin-bottom: 22px;
+  color: #fff;
+}
+
+/* SYNOPSIS : un peu plus d’espace après l’image */
+.synopsis-text {
+  max-width: 900px;
+  margin: 30px auto 0 auto;
+  text-align: justify;
+}
+
+/* IMAGES / VIDEO */
+.cover-img, .full-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.video iframe {
+  width: 100%;
+  height: 56.25vw; /* ratio 16:9 */
+  max-width: 1200px;
+  max-height: 675px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  h2 { font-size: 26px; }
+  body { font-size: 20px; }
+  section { padding: 50px 5vw; }
+  .full-img { width: 100%; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 18px; }
+  h2 { font-size: 22px; }
+  section { padding: 40px 4vw; }
+
+  .desktop-only { display: none; }
+  .mobile-only { display: block; text-align: center; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 : COVER -->
+<section class="cover">
+  <img src="images/Kawas Sancti eng.pdf-image-000.jpg" alt="Kawas Sancti cover" class="cover-img">
+</section>
+
+<!-- PAGE 2 : SYNOPSIS -->
+<section>
+  <h2>S Y N O P S I S</h2>
+  <img class="full-img" src="images/Kawas Sancti eng.pdf-image-001.jpg" alt="Synopsis image">
+  <div class="text synopsis-text">
+    <p>Deep in the lush rice fields of Hualien County, Taiwan, the Pangcah (Amis) Indigenous community lives at the intersection of two spiritual worlds:</p>
+    <p>On one hand, the ancestral traditions passed down through generations of shamans;</p>
+    <p>On the other hand, the Christian faith introduced by missionaries.</p>
+    <p>This 52-minute documentary follows the young shaman Marang Panay, documenting his performance of healing rituals. At the same time, we meet Father Joseph, a Catholic missionary working within the same community.</p>
+    <p>Through these two life paths, the film portrays the coexistence of these spiritual worlds and attempts to reveal the profound and essential similarities between them.</p>
+  </div>
+</section>
+
+<!-- PAGE 3 : TRAILER -->
+<section class="video">
+  <h2>T R A I L E R</h2>
+  <iframe 
+    src="https://www.youtube.com/embed/x09F2qtMAxc" 
+    title="Kawas Sancti Trailer" 
+    allowfullscreen>
+  </iframe>
+</section>
+
+<!-- PAGE 4 : DIRECTOR STATEMENT -->
+<section>
+  <h2>
+    <span class="desktop-only">D I R E C T O R ’ S &nbsp; S T A T E M E N T</span>
+    <span class="mobile-only">D I R E C T O R ’ S<br>S T A T E M E N T</span>
+  </h2>
+  <div class="text">
+    <p>The film invites audiences to delve into the complex and multi-layered spiritual world of the Indigenous community. By portraying the coexistence of shamanic rituals and Christian ceremonies, it reveals a culture that continuously adapts and evolves amid social and historical transformations.</p>
+    <p>As a shaman of the Sikawasay hierarchy, Marang’s life journey guides us into a world where shamanic rituals honor ancestral spirits, heal ailments, and sustain an intimate and profound connection with the sacred. The film also explores how Christianity, introduced by missionaries in the 1950s, gradually integrated into local traditions.</p>
+    <p>The creative intention of this work is to offer an experience of “listening” rather than a didactic exposition: following the rhythm of the subjects’ own time, attuning to their songs, their uncertainties, and the subtleties of their gestures.</p>
+  </div>
+  <img class="full-img" src="images/Kawas Sancti eng.pdf-image-002.jpg" alt="Director statement image">
+</section>
+
+</body>
+</html>
