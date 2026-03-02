@@ -30,27 +30,6 @@ body {
   background-color: #000;
   color: #fff;
   text-align: center;
-  position: relative;
-}
-
-/* BOUTONS LANGUE / ACCUEIL */
-.lang-btn, .home-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: rgba(255,255,255,0.1);
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 8px 14px;
-  font-weight: 600;
-  font-family: 'Lato', sans-serif;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-left: 10px;
-  transition: background 0.3s;
-}
-.lang-btn:hover, .home-btn:hover {
-  background: rgba(255,255,255,0.3);
 }
 
 /* TITRES */
@@ -84,7 +63,7 @@ section {
   color: #fff;
 }
 
-/* SYNOPSIS : un peu plus d’espace après l’image */
+/* SYNOPSIS */
 .synopsis-text {
   max-width: 900px;
   margin: 30px auto 0 auto;
@@ -110,6 +89,38 @@ section {
   margin: 0 auto;
 }
 
+/* BOUTONS FIXES EN HAUT À DROITE */
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+.top-buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.top-buttons a:hover {
+  color: #ffd700;
+  border-bottom-color: #ffd700;
+}
+
+.top-buttons .separator {
+  color: #fff;
+  font-weight: 600;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1000px) {
   h2 { font-size: 26px; }
@@ -131,9 +142,12 @@ section {
 
 <body>
 
-<!-- BOUTONS LANGUE / ACCUEIL -->
-<a href="Kawas.html" class="lang-btn">FR</a>
-<a href="index.html" class="home-btn">Home</a>
+<!-- BOUTONS FIXES -->
+<div class="top-buttons">
+  <a href="Kawas.html" class="lang-btn">FR</a>
+  <span class="separator">|</span>
+  <a href="index.html" class="home-btn">Home</a>
+</div>
 
 <!-- PAGE 1 : COVER -->
 <section class="cover">
@@ -157,7 +171,7 @@ section {
 <section class="video">
   <h2>T R A I L E R</h2>
   <iframe 
-    src="https://www.youtube.com/embed/x09F2qtMAxc" 
+    src="https://www.youtube.com/watch?v=x09F2qtMAxc" 
     title="Kawas Sancti Trailer" 
     allowfullscreen>
   </iframe>
