@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team | Rio Verde Production</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.8;
+  font-size: 22px;
+  text-align: left;
+}
+
+/* BOUTONS GAUCHE */
+.top-left-buttons {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
+
+.top-left-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+.top-left-buttons a:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+/* BOUTONS DROITE */
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
+
+.top-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+.top-buttons a:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+/* TITRES */
+h2 {
+  font-style: italic;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* TEAM SECTION */
+.team-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 100px auto 50px auto;
+}
+
+/* TEAM MEMBER : PHOTO à gauche, texte à droite, centré verticalement */
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.team-member img {
+  width: 45%;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.team-member .text {
+  flex: 1;
+  font-size: 22px;
+  text-align: justify;
+}
+
+.team-member .name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.team-member .role {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .team-member {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-member img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .team-member .text {
+    font-size: 20px;
+    text-align: justify;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- BOUTONS FIXES -->
+<div class="top-left-buttons">
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="top-buttons">
+  <a href="index.html">Home</a>
+  <a href="team.html">FR</a>
+</div>
+
+<!-- PAGE TEAM -->
+<section class="team-section">
+
+  <!-- Gauthier Le Pévédic -->
+  <div class="team-member">
+    <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Portrait of Gauthier Le Pévédic">
+    <div class="text">
+      <div class="name">Gauthier Le Pévédic</div>
+      <div class="role">Director</div>
+      <p>From 2023 to 2025, Gauthier Le Pévédic directed several documentaries immersively with religious and spiritual communities. In 2023, he filmed <strong>La Règle</strong> within the community of the Augustines of the Mercy of Jesus in Dieppe, providing a look at monastic daily life and contemporary religious life. In 2024, he filmed <strong>Rio Verde</strong> in Roaboya, a Shipibo village in the Peruvian Amazon, exploring local spiritual and ritual dynamics. In 2025, he directed <strong>Kawas Sancti</strong> within a Pangcah community in Hualien, Taiwan, focusing on Catholic and shamanic religious practices.</p>
+    </div>
+  </div>
+
+  <!-- Florian Thibert -->
+  <div class="team-member">
+    <img src="images/Florian,contact.JPG" alt="Portrait of Florian Thibert">
+    <div class="text">
+      <div class="name">Florian Thibert</div>
+      <div class="role">Head of Post-Production</div>
+      <p>Initially an industrial electromechanical repairer and self-taught sound system operator, Florian Thibert turned to image in 2020.</p>
+      <p>He owns a technical service company, <strong>"Tekhnè - Music & Film"</strong>, with which he produces and directs documentaries.</p>
+      <p>He is also a camera operator for France 3 Régions and a member of the image department of the CST (Commission Supérieure Technique de l'Image et du Son).</p>
+      <p>His interests include botany, philosophy, and technical arts.</p>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>
