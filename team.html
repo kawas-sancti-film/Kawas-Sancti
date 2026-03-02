@@ -24,10 +24,10 @@ body {
   font-size: 22px;
 }
 
-/* BOUTONS FIXES */
-.language-btn, .home-btn, .contact-btn {
+/* BOUTONS FIXES identiques aux pages Rio Verde / Kawas Sancti */
+.btn-fixed {
   position: fixed;
-  padding: 10px 18px;
+  padding: 10px 20px;
   background: #fff;
   color: #000;
   font-weight: 600;
@@ -37,9 +37,9 @@ body {
   transition: background 0.3s;
   z-index: 1000;
 }
-.language-btn:hover, .home-btn:hover, .contact-btn:hover { background: #ccc; }
+.btn-fixed:hover { background: #ccc; }
 
-/* Position boutons */
+/* Position des boutons */
 .contact-btn { top: 20px; left: 20px; }
 .home-btn { top: 20px; right: 120px; }
 .language-btn { top: 20px; right: 20px; }
@@ -60,10 +60,10 @@ h2 {
   margin: 100px auto 50px auto;
 }
 
-/* TEAM MEMBER : PHOTO à gauche, texte à droite */
+/* TEAM MEMBER : PHOTO à gauche, texte à droite, verticalement centré */
 .team-member {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* centrer verticalement */
   gap: 40px;
   margin-bottom: 60px;
   flex-wrap: wrap;
@@ -105,10 +105,10 @@ h2 {
 
 <body>
 
-<!-- BOUTONS -->
-<a href="contact.html" class="contact-btn">Contact</a>
-<a href="index.html" class="home-btn">Accueil</a>
-<a href="team_en.html" class="language-btn">EN</a>
+<!-- BOUTONS FIXES -->
+<a href="contact.html" class="btn-fixed contact-btn">Contact</a>
+<a href="index.html" class="btn-fixed home-btn">Accueil</a>
+<a href="team_en.html" class="btn-fixed language-btn">EN</a>
 
 <!-- PAGE TEAM -->
 <section class="team-section">
