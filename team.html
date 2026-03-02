@@ -19,30 +19,66 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: #000;
   color: #fff;
-  text-align: left;
   line-height: 1.8;
   font-size: 22px;
+  text-align: left;
 }
 
-/* BOUTONS FIXES identiques aux pages Rio Verde / Kawas Sancti */
-.btn-fixed {
+/* BOUTONS GAUCHE */
+.top-left-buttons {
   position: fixed;
-  padding: 10px 20px;
-  background: #fff;
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 4px;
-  font-family: 'Lato', sans-serif;
-  transition: background 0.3s;
-  z-index: 1000;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
 }
-.btn-fixed:hover { background: #ccc; }
 
-/* Position des boutons */
-.contact-btn { top: 20px; left: 20px; }
-.home-btn { top: 20px; right: 120px; }
-.language-btn { top: 20px; right: 20px; }
+.top-left-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+.top-left-buttons a:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+/* BOUTONS DROITE */
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
+
+.top-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+.top-buttons a:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
 
 /* TITRES */
 h2 {
@@ -60,10 +96,10 @@ h2 {
   margin: 100px auto 50px auto;
 }
 
-/* TEAM MEMBER : PHOTO à gauche, texte à droite, verticalement centré */
+/* TEAM MEMBER : PHOTO à gauche, texte à droite, centré verticalement */
 .team-member {
   display: flex;
-  align-items: center; /* centrer verticalement */
+  align-items: center;
   gap: 40px;
   margin-bottom: 60px;
   flex-wrap: wrap;
@@ -96,9 +132,18 @@ h2 {
 
 /* RESPONSIVE */
 @media (max-width: 1000px) {
-  .team-member { flex-direction: column; align-items: center; }
-  .team-member img { width: 80%; margin-bottom: 20px; }
-  .team-member .text { font-size: 20px; text-align: justify; }
+  .team-member {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-member img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .team-member .text {
+    font-size: 20px;
+    text-align: justify;
+  }
 }
 </style>
 </head>
@@ -106,9 +151,14 @@ h2 {
 <body>
 
 <!-- BOUTONS FIXES -->
-<a href="contact.html" class="btn-fixed contact-btn">Contact</a>
-<a href="index.html" class="btn-fixed home-btn">Accueil</a>
-<a href="team_en.html" class="btn-fixed language-btn">EN</a>
+<div class="top-left-buttons">
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="top-buttons">
+  <a href="index.html">Accueil</a>
+  <a href="team_en.html">EN</a>
+</div>
 
 <!-- PAGE TEAM -->
 <section class="team-section">
@@ -119,8 +169,7 @@ h2 {
     <div class="text">
       <div class="name">Gauthier Le Pévédic</div>
       <div class="role">Réalisateur</div>
-      <p>Gauthier Le Pévédic, chercheur et réalisateur, se consacre à la création de films documentaires explorant les rites religieux à travers le monde. En 2023, il réalise <strong>Rio Verde</strong> en Amazonie péruvienne au sein d’une communauté Shipibo. En 2024, il réalise <strong>Kawas Sancti</strong> à Tafalong, Taïwan, auprès d’une communauté Pangcah.</p>
-      <p>De 2023 à 2025, il a également filmé <strong>La Règle</strong> au sein de la communauté des Augustines de la Miséricorde de Jésus à Dieppe, explorant le quotidien monastique et la vie religieuse contemporaine.</p>
+      <p>De 2023 à 2025, Gauthier Le Pévédic a réalisé plusieurs documentaires en immersion auprès de communautés religieuses et spirituelles. En 2023, il filme <strong>La Règle</strong> au sein de la communauté des Augustines de la Miséricorde de Jésus à Dieppe, offrant un regard sur le quotidien monastique et la vie religieuse contemporaine. En 2024, il tourne <strong>Rio Verde</strong> à Roaboya, village shipibo d’Amazonie péruvienne, explorant les dynamiques spirituelles et rituelles locales. En 2025, il réalise <strong>Kawas Sancti</strong> au sein d’une communauté Pangcah à Hualien (Taïwan), autour des pratiques religieuses catholiques et chamaniques.</p>
     </div>
   </div>
 
