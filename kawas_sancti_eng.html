@@ -32,6 +32,34 @@ body {
   text-align: center;
 }
 
+/* LANGUAGE BUTTONS */
+.language-btns {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+.language-btns a {
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+.language-btns .fr {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.language-btns .en {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
 /* TITRES */
 h2 {
   font-style: italic;
@@ -110,6 +138,12 @@ section {
 
 <body>
 
+<!-- LANGUAGE BUTTONS -->
+<div class="language-btns">
+  <a href="Kawas.html" class="fr">FR</a>
+  <a href="Kawas_eng.html" class="en">EN</a>
+</div>
+
 <!-- PAGE 1 : COVER -->
 <section class="cover">
   <img src="images/Kawas Sancti eng.pdf-image-000.jpg" alt="Kawas Sancti cover" class="cover-img">
@@ -132,7 +166,7 @@ section {
 <section class="video">
   <h2>T R A I L E R</h2>
   <iframe 
-    src="https://www.youtube.com/embed/x09F2qtMAxc" 
+    src="https://www.youtube.com/embed/xdDDuLxOJ1M?si=9Cd2wATn5Aji2F4e" 
     title="Kawas Sancti Trailer" 
     allowfullscreen>
   </iframe>
