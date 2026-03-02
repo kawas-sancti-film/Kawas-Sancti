@@ -30,34 +30,27 @@ body {
   background-color: #000;
   color: #fff;
   text-align: center;
+  position: relative;
 }
 
-/* LANGUAGE BUTTONS */
-.language-btns {
+/* BOUTONS LANGUE / ACCUEIL */
+.lang-btn, .home-btn {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1000;
-  display: flex;
-  gap: 10px;
-}
-.language-btns a {
-  padding: 8px 14px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-}
-.language-btns .fr {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
-}
-.language-btns .en {
-  background-color: #000;
+  background: rgba(255,255,255,0.1);
   color: #fff;
   border: 1px solid #fff;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: background 0.3s;
+}
+.lang-btn:hover, .home-btn:hover {
+  background: rgba(255,255,255,0.3);
 }
 
 /* TITRES */
@@ -138,10 +131,9 @@ section {
 
 <body>
 
-<!-- LANGUAGE BUTTONS -->
-<div class="language-btns">
-  <a href="Kawas.html" class="fr">FR</a>
-</div>
+<!-- BOUTONS LANGUE / ACCUEIL -->
+<a href="Kawas.html" class="lang-btn">FR</a>
+<a href="index.html" class="home-btn">Home</a>
 
 <!-- PAGE 1 : COVER -->
 <section class="cover">
@@ -165,7 +157,7 @@ section {
 <section class="video">
   <h2>T R A I L E R</h2>
   <iframe 
-    src="https://www.youtube.com/embed/x09F2qtMAxc"
+    src="https://www.youtube.com/embed/x09F2qtMAxc" 
     title="Kawas Sancti Trailer" 
     allowfullscreen>
   </iframe>
