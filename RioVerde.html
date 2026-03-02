@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,12 +63,68 @@ section {
 /* VIDEO */
 .video iframe {
   width: 100%;
-  height: 56.25vw; /* 16:9 */
+  height: 56.25vw;
   max-width: 1200px;
   max-height: 675px;
   border: none;
   display: block;
   margin: 0 auto;
+}
+
+/* BOUTONS GAUCHE */
+.top-left-buttons {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
+
+.top-left-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+.top-left-buttons a:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+/* BOUTONS DROITE */
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
+
+.top-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+.top-buttons a:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
 }
 
 /* RESPONSIVE */
@@ -91,58 +147,69 @@ section {
 
 <body>
 
+<!-- BOUTONS GAUCHE -->
+<div class="top-left-buttons">
+  <a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- BOUTONS DROITE -->
+<div class="top-buttons">
+  <a href="index.html">Accueil</a>
+  <a href="rioverde-eng.html">EN</a>
+</div>
+
 <!-- PAGE 1 : COVER -->
 <section>
-  <img src="images/Rio Verde image 0.jpg" alt="Rio Verde cover" class="cover-img">
+  <img src="images/Rio Verde image 0.jpg" alt="Rio Verde couverture" class="cover-img">
 </section>
 
 <!-- PAGE 2 : SYNOPSIS -->
 <section>
   <h2>S Y N O P S I S</h2>
 
-  <img src="images/Rio Verde image 1.jpg" alt="Rio Verde synopsis image" class="full-img">
+  <img src="images/Rio Verde image 1.jpg" alt="Rio Verde image synopsis" class="full-img">
 
   <div class="text">
-    <p>Rio Verde is named after a river flowing through the remote village of Roaboya in the Peruvian Amazon.</p>
+    <p>Rio Verde tire son nom d’une rivière traversant le village isolé de Roaboya, au cœur de l’Amazonie péruvienne.</p>
 
-    <p>The film explores the relationship between shamans and evangelical pastors in this isolated land—where songs, visions, and ayahuasca ceremonies coexist with the words of the Bible.</p>
+    <p>Le film explore la relation entre les chamans et les pasteurs évangéliques dans cette terre reculée — où chants, visions et cérémonies d’ayahuasca coexistent avec la parole de la Bible.</p>
 
-    <p>Between trance and prayer, the film reveals a profound dialogue between two approaches to faith and healing.</p>
+    <p>Entre transe et prière, le film révèle un dialogue profond entre deux manières d’envisager la foi et la guérison.</p>
   </div>
 </section>
 
 <!-- PAGE 3 : TRAILER -->
 <section class="video">
-  <h2>T R A I L E R</h2>
+  <h2>B A N D E - A N N O N C E</h2>
   <iframe 
     src="https://www.youtube.com/embed/xdDDuLxOJ1M"
-    title="Rio Verde Trailer"
+    title="Rio Verde Bande-Annonce"
     allowfullscreen>
   </iframe>
 </section>
 
-<!-- PAGE 4 : DIRECTOR’S STATEMENT -->
+<!-- PAGE 4 : NOTE D’INTENTION -->
 <section>
   <h2>
-    <span class="desktop-only">D I R E C T O R ’ S &nbsp; S T A T E M E N T</span>
-    <span class="mobile-only">D I R E C T O R ’ S<br>S T A T E M E N T</span>
+    <span class="desktop-only">N O T E &nbsp; D ’ I N T E N T I O N</span>
+    <span class="mobile-only">N O T E D ’ I N T E N T I O N</span>
   </h2>
 
   <div class="text">
-    <p>Deep in the Peruvian Amazon, the village of Roaboya is a place where multiple faiths coexist: traditional shamanic practices, evangelical churches, and the Seventh-day Adventist religious tradition.</p>
+    <p>Au cœur de l’Amazonie péruvienne, le village de Roaboya est un lieu où plusieurs croyances coexistent : les pratiques chamaniques traditionnelles, les églises évangéliques et la tradition religieuse adventiste du septième jour.</p>
 
-    <p>Through a close observation of their singing, rituals, and mystical manifestations, the film explores the resonances and divergences between these spiritual worlds.</p>
+    <p>À travers une observation attentive des chants, des rituels et des manifestations mystiques, le film explore les résonances et les divergences entre ces mondes spirituels.</p>
   </div>
 
-  <img src="images/Rio Verde image 2.jpg" alt="Rio Verde director statement image" class="full-img">
+  <img src="images/Rio Verde image 2.jpg" alt="Rio Verde image note d’intention" class="full-img">
 
   <div class="text">
-    <p>Shamanic rituals center on the consumption of ayahuasca, inviting participants to engage in dialogue with the spirits of nature. The icaros—sacred songs inspired by plants—serve as a medium for healing and inner revelation.</p>
+    <p>Les rituels chamaniques s’articulent autour de la consommation d’ayahuasca, invitant les participants à entrer en dialogue avec les esprits de la nature. Les icaros — chants sacrés inspirés par les plantes — deviennent un médium de guérison et de révélation intérieure.</p>
 
-    <p>In contrast, the hymns of evangelical and Seventh-day Adventist communities speak to the Holy Spirit and Jesus, seeking purification, conversion, and the presence of the divine.</p>
+    <p>À l’inverse, les hymnes des communautés évangéliques et adventistes s’adressent à l’Esprit Saint et à Jésus, recherchant purification, conversion et présence du divin.</p>
 
-    <p>Research suggests that these seemingly distinct religious practices share a fundamental pursuit: establishing a relationship with the unseen, transcending ordinary consciousness, and entering a state of openness and communion.</p>
-
+    <p>Les recherches suggèrent que ces pratiques religieuses, bien qu’en apparence distinctes, partagent une quête fondamentale : établir une relation avec l’invisible, dépasser la conscience ordinaire et entrer dans un état d’ouverture et de communion.</p>
   </div>
 </section>
 
