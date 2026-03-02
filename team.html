@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Team | Rio Verde Production</title>
+<title>Équipe | Rio Verde Production</title>
 
+<!-- FAVICONS -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -21,117 +30,125 @@ body {
   text-align: center;
   line-height: 1.8;
   font-size: 22px;
+  position: relative;
 }
+
+/* BOUTONS EN HAUT */
+.nav-button {
+  position: fixed;
+  top: 20px;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Bouton à gauche */
+.nav-left { left: 20px; }
+/* Bouton à droite */
+.nav-right { right: 20px; }
 
 /* TITRES */
-.team-title {
-  font-size: 28px;
-  font-weight: 600;
-  margin: 100px 0 40px 0;
+h2 {
   font-style: italic;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #fff;
 }
 
-/* SECTION */
+/* TEAM SECTION */
 .team-section {
   width: 90%;
-  max-width: 1200px;
-  margin: 50px auto;
+  max-width: 1000px;
+  margin: 100px auto 50px auto; /* margin-top pour les boutons fixes */
 }
 
-/* BLOC MEMBRE */
+/* IMAGE + TEXTE */
 .team-member {
   display: flex;
-  align-items: flex-start; /* ALIGNEMENT HAUT */
-  gap: 60px;
-  margin-bottom: 140px;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
 }
 
-.image-container {
-  width: 50%;
-  max-width: 550px;
-  text-align: center;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
+.team-member img {
+  width: 45%;
+  max-width: 400px;
   object-fit: cover;
   border-radius: 8px;
-  display: block;
-}
-
-.member-name {
-  margin-top: 20px;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
 }
 
 .team-member .text {
-  width: 50%;
   text-align: left;
-  font-size: 23px;
-  margin-top: 0;
+  font-size: 24px;
+}
+
+.team-member .name {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 22px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 1000px) {
   .team-member {
     flex-direction: column;
-    align-items: center;
   }
-
-  .image-container {
-    width: 85%;
+  .team-member img {
+    width: 80%;
+    margin-bottom: 20px;
   }
-
   .team-member .text {
-    width: 100%;
-    font-size: 19px;
-    text-align: center;
-    margin-top: 25px;
+    font-size: 20px;
   }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- BOUTONS -->
+<a href="contact.html" class="nav-button nav-left">Contact</a>
+<a href="index_eng.html" class="nav-button nav-right">Accueil EN</a>
+
+<!-- PAGE TEAM -->
 <section class="team-section">
-
-  <!-- DIRECTOR -->
-  <div class="team-title">Director</div>
+  <h2>Director</h2>
   
+  <!-- Gauthier -->
   <div class="team-member">
-    <div class="image-container">
-      <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Gauthier Le Pévédic">
-      <div class="member-name">Gauthier Le Pévédic</div>
-    </div>
-
+    <img src="images/Kawas Sancti eng.pdf-image-004.jpg" alt="Portrait Gauthier Le Pévédic">
     <div class="text">
-      <p>Gauthier Le Pévédic is a researcher and filmmaker, specializing in anthropological and documentary cinema exploring religious rituals and spiritual practices around the world.</p>
-      <p>In 2023, he directed <em>Rio Verde</em> within the Shipibo community in the Peruvian Amazon.</p>
-      <p>In 2024, in collaboration with the Pangcah community in Taiwan, he directed <em>Kawas Sancti</em>, working closely with Catholic and shamanic religious leaders.</p>
+      <div class="name">Gauthier Le Pévédic, chercheur et réalisateur</div>
+      <p>Gauthier Le Pévédic se consacre à la création de films documentaires explorant les rites religieux à travers le monde.</p>
+      <p>En 2023, il réalise Rio Verde en Amazonie péruvienne au sein d’une communauté Shipibo.</p>
+      <p>En 2024, il réalise Kawas Sancti à Tafalong, Taïwan, auprès d’une communauté Pangcah, en collaboration avec des chefs religieux catholiques et chamaniques.</p>
     </div>
   </div>
 
-  <!-- HEAD OF POST-PRODUCTION -->
-  <div class="team-title">Head of Post-Production</div>
-
+  <!-- Florian -->
   <div class="team-member">
-    <div class="image-container">
-      <img src="images/Florian,contact.JPG" alt="Florian Thibert">
-      <div class="member-name">Florian Thibert</div>
-    </div>
-
+    <img src="images/Florian,contact.JPG" alt="Portrait Florian Thibert">
     <div class="text">
-      <p>Florian Thibert began his professional path as an industrial electromechanical repairer and self-taught sound system operator before turning to image-making in 2020.</p>
-      <p>He founded the technical service company <em>Tekhnè – Music & Film</em>, through which he produces and directs documentary projects.</p>
-      <p>He is a camera operator for France 3 Régions and a member of the image department of the CST (Commission Supérieure Technique de l’Image et du Son).</p>
+      <div class="name">Florian Thibert, Head of Post-Production</div>
+      <p>Initialement technicien en électromécanique industrielle et autodidacte en exploitation de systèmes sonores, Florian Thibert s’est tourné vers l’image en 2020.</p>
+      <p>Il possède une société de services techniques, « Tekhnè - Music & Film », avec laquelle il produit et réalise des documentaires.</p>
+      <p>Il est également cadreur pour France 3 Régions et membre du département image de la CST, Commission Supérieure Technique de l’Image et du Son.</p>
+      <p>Ses centres d’intérêt incluent la botanique, la philosophie et les arts techniques.</p>
     </div>
   </div>
-
 </section>
 
 </body>
