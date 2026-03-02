@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -46,48 +42,19 @@ h2 {
 .mobile-only { display: none; text-align: center; }
 
 /* SECTIONS */
-section {
-  width: 100%;
-  padding: 60px 6vw;
-}
+section { width: 100%; padding: 60px 6vw; }
 
 /* TEXTE */
-.text {
-  max-width: 900px;
-  margin: auto;
-  overflow-wrap: break-word;
-  text-align: justify;
-}
-.text p {
-  margin-bottom: 22px;
-  color: #fff;
-}
+.text { max-width: 900px; margin: auto; overflow-wrap: break-word; text-align: justify; }
+.text p { margin-bottom: 22px; color: #fff; }
 
-/* SYNOPSIS : un peu plus d’espace après l’image */
-.synopsis-text {
-  max-width: 900px;
-  margin: 30px auto 0 auto;
-  text-align: justify;
-}
+/* SYNOPSIS */
+.synopsis-text { max-width: 900px; margin: 30px auto 0 auto; text-align: justify; }
 
 /* IMAGES / VIDEO */
-.cover-img, .full-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  margin: 0 auto;
-}
+.cover-img, .full-img { width: 100%; height: auto; display: block; object-fit: cover; margin: 0 auto; }
 
-.video iframe {
-  width: 100%;
-  height: 56.25vw; /* ratio 16:9 */
-  max-width: 1200px;
-  max-height: 675px;
-  border: none;
-  display: block;
-  margin: 0 auto;
-}
+.video iframe { width: 100%; height: 56.25vw; max-width: 1200px; max-height: 675px; border: none; display: block; margin: 0 auto; }
 
 /* RESPONSIVE */
 @media (max-width: 1000px) {
@@ -101,7 +68,6 @@ section {
   body { font-size: 18px; }
   h2 { font-size: 22px; }
   section { padding: 40px 4vw; }
-
   .desktop-only { display: none; }
   .mobile-only { display: block; text-align: center; }
 }
@@ -109,6 +75,15 @@ section {
 </head>
 
 <body>
+
+<!-- BOUTON LANGUE EN/FR -->
+<a href="kawas_sancti_eng.html" 
+   style="position: fixed; top: 20px; right: 20px; 
+          background-color: #fff; color: #000; 
+          padding: 6px 12px; border-radius: 4px; 
+          font-weight: 600; text-decoration: none; z-index: 1000;">
+  EN
+</a>
 
 <!-- PAGE 1 : COVER -->
 <section class="cover">
@@ -120,36 +95,36 @@ section {
   <h2>S Y N O P S I S</h2>
   <img class="full-img" src="images/Kawas Sancti eng.pdf-image-001.jpg" alt="Synopsis image">
   <div class="text synopsis-text">
-    <p>Deep in the lush rice fields of Hualien County, Taiwan, the Pangcah (Amis) Indigenous community lives at the intersection of two spiritual worlds:</p>
-    <p>On one hand, the ancestral traditions passed down through generations of shamans;</p>
-    <p>On the other hand, the Christian faith introduced by missionaries.</p>
-    <p>This 52-minute documentary follows the young shaman Marang Panay, documenting his performance of healing rituals. At the same time, we meet Father Joseph, a Catholic missionary working within the same community.</p>
-    <p>Through these two life paths, the film portrays the coexistence of these spiritual worlds and attempts to reveal the profound and essential similarities between them.</p>
+    <p>Au cœur des luxuriantes rizières taïwanaises du comté de Hualien, la communauté autochtone Pangcah vit au carrefour de deux mondes spirituels : les traditions ancestrales transmises par les chamans et le christianisme prêché par les missionnaires.</p>
+    <p>Ce documentaire de 52 minutes suit Marang Panay, un jeune chaman, lors de ses rites de guérison. Nous rencontrons également le Père Joseph, un missionnaire catholique, prêchant au sein de cette même communauté.</p>
+    <p>Au travers de ces deux parcours, le film met en lumière la coexistence de ces mondes spirituels et cherche à en révéler les profondes similitudes.</p>
+    <img class="full-img" src="images/Kawas Sancti eng.pdf-image-002.jpg" alt="Director statement image">
+    <p>Le parcours de Marang, chaman de la caste des Sikawasay, nous entraîne dans un univers où les cérémonies chamaniques honorent les esprits ancestraux, guérissent les afflictions et préservent une connexion intime avec le sacré. Le film explore en parallèle l’intégration du christianisme aux traditions locales, introduit par des missionnaires dans les années 1950.</p>
+    <p>L’intention est de proposer une expérience d'écoute plutôt qu’un film explicatif : suivre les personnes dans leur temporalité, leurs chants, leurs doutes et leurs gestes.</p>
   </div>
 </section>
 
 <!-- PAGE 3 : TRAILER -->
 <section class="video">
-  <h2>T R A I L E R</h2>
+  <h2>B A N D E - A N N O N C E</h2>
   <iframe 
-    src="https://www.youtube.com/embed/x09F2qtMAxc" 
-    title="Kawas Sancti Trailer" 
+    src="https://www.youtube.com/embed/xdDDuLxOJ1M?si=9Cd2wATn5Aji2F4e" 
+    title="Bande annonce Kawas Sancti" 
     allowfullscreen>
   </iframe>
 </section>
 
-<!-- PAGE 4 : DIRECTOR STATEMENT -->
+<!-- PAGE 4 : NOTE D'INTENTION -->
 <section>
   <h2>
-    <span class="desktop-only">D I R E C T O R ’ S &nbsp; S T A T E M E N T</span>
-    <span class="mobile-only">D I R E C T O R ’ S<br>S T A T E M E N T</span>
+    <span class="desktop-only">N O T E &nbsp; D ’ I N T E N T I O N</span>
+    <span class="mobile-only">N O T E<br>D ’ I N T E N T I O N</span>
   </h2>
   <div class="text">
-    <p>The film invites audiences to delve into the complex and multi-layered spiritual world of the Indigenous community. By portraying the coexistence of shamanic rituals and Christian ceremonies, it reveals a culture that continuously adapts and evolves amid social and historical transformations.</p>
-    <p>As a shaman of the Sikawasay hierarchy, Marang’s life journey guides us into a world where shamanic rituals honor ancestral spirits, heal ailments, and sustain an intimate and profound connection with the sacred. The film also explores how Christianity, introduced by missionaries in the 1950s, gradually integrated into local traditions.</p>
-    <p>The creative intention of this work is to offer an experience of “listening” rather than a didactic exposition: following the rhythm of the subjects’ own time, attuning to their songs, their uncertainties, and the subtleties of their gestures.</p>
+    <p>Ce film propose de plonger le spectateur dans l’univers complexe de la spiritualité des communautés autochtones par la mise en lumière de la coexistence des rituels chamaniques et chrétiens, révélant une culture en perpétuelle adaptation face aux changements sociaux et historiques.</p>
+    <p>Le parcours de Marang, chaman de la caste des Sikawasay, nous entraîne dans un univers où les cérémonies chamaniques honorent les esprits ancestraux, guérissent les afflictions et préservent une connexion intime avec le sacré. Le film explore en parallèle l’intégration du christianisme aux traditions locales, introduit par des missionnaires dans les années 1950.</p>
+    <p>L’intention est de proposer une expérience d'écoute plutôt qu’un film explicatif : suivre les personnes dans leur temporalité, leurs chants, leurs doutes et leurs gestes.</p>
   </div>
-  <img class="full-img" src="images/Kawas Sancti eng.pdf-image-002.jpg" alt="Director statement image">
 </section>
 
 </body>
