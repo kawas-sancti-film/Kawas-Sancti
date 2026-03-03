@@ -20,17 +20,60 @@ body {
   height: 100vh;
   text-align: center;
 }
-<body>
 
-<!-- BOUTON GAUCHE -->
-<div class="top-left-buttons">
-  <a href="team.html">Team</a>
-</div>
+/* BOUTONS GAUCHE */
+.top-left-buttons {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+}
 
-<!-- BOUTON DROITE -->
-<div class="top-buttons">
-  <a href="index.html">Accueil</a>
-</div>
+.top-left-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.top-left-buttons a:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+/* BOUTONS DROITE */
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+}
+
+.top-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.top-buttons a:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+/* CONTENU CONTACT */
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -59,61 +102,7 @@ body {
   color: #000;
   transform: scale(1.05);
 }
-/* BOUTONS GAUCHE */
-.top-left-buttons {
-  position: fixed;
-  top: 20px;
-  left: 30px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 999;
-}
 
-.top-left-buttons a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-bottom: 2px solid #fff;
-  transition: all 0.3s ease;
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
-}
-
-.top-left-buttons a:hover {
-  color: #000;
-  background-color: #fff;
-  border-bottom: 2px solid #000;
-}
-
-/* BOUTONS DROITE */
-.top-buttons {
-  position: fixed;
-  top: 20px;
-  right: 30px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 999;
-}
-
-.top-buttons a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-bottom: 2px solid #fff;
-  transition: all 0.3s ease;
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
-}
-
-.top-buttons a:hover {
-  color: #000;
-  background-color: #fff;
-  border-bottom: 2px solid #000;
-}
 /* Responsive */
 @media (max-width: 600px) {
   .contact-title { font-size: 28px; }
@@ -124,6 +113,16 @@ body {
 
 <body>
 
+<!-- NAVIGATION -->
+<div class="top-left-buttons">
+  <a href="team.html">Team</a>
+</div>
+
+<div class="top-buttons">
+  <a href="index.html">Accueil</a>
+</div>
+
+<!-- CONTENU -->
 <div class="contact-container">
   <div class="contact-title">Contact</div>
   <a class="contact-link" href="tel:+33684084013">📞 +33 6 84 08 40 13</a>
